@@ -1,7 +1,3 @@
-use Example::Hello;
 use Test;
-plan 3;
-my Example::Hello $greeter .= new;
-isa_ok( $greeter, 'Example::Hello', 'create object' );
-is( $greeter.greet, 'hello', 'greet' );
-is( $greeter.place, 'world', 'place' );
+plan 1;
+use_ok( 'File::Find', 'Can find module in @*INC' );
